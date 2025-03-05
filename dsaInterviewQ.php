@@ -1,4 +1,33 @@
 <?php
+function mergeArray($array1, $array2){
+    $merge = [];
+    $i = $j = 0;
+
+    while ($i < count($array1) && $j < count($array2)) {
+        if ($array1[$i] < $array2[$j]) {
+            $merge[] = $array1[$i++];
+        } else {
+            $merge[] = $array2[$j++];
+        }
+    }
+
+    // Remaining elements from array1
+    while ($i < count($array1)) {
+        $merge[] = $array1[$i++];
+    }
+
+    // Remaining elements from array2
+    while ($j < count($array2)) {
+        $merge[] = $array2[$j++];
+    }
+
+    return $merge;
+}
+
+$array1 = [1, 3, 5, 7];
+$array2 = [2, 4, 6, 8];
+$resultArray = mergeArray($array1, $array2);
+print_r($resultArray);
 
 function findLargest($arr){
     // sort($arr);
