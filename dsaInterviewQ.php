@@ -1,6 +1,6 @@
 <?php
 $array = [1, 1, 2, 3, 3, 7, 6, 7];
-findCountOfElement($array){
+function findCountOfElement($array){
 $counted_values = [];
 foreach($array as $value) {    
     if (isset($counted_values[$value])) {
