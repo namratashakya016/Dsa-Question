@@ -1,4 +1,17 @@
 <?php
+$array = [1, 1, 2, 3, 3, 7, 6, 7];
+findCountOfElement($array){
+$counted_values = [];
+foreach($array as $value) {    
+    if (isset($counted_values[$value])) {
+        $counted_values[$value]++;
+    } else {
+        $counted_values[$value] = 1;
+    }
+}
+}
+findCountOfElement($counted_values);
+
 function mergeArray($array1, $array2){
     $merge = [];
     $i = $j = 0;
